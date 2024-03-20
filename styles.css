@@ -1,0 +1,53 @@
+body {
+    background-color: #222222; /* Cor de fundo cinza escuro */
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff; /* Cor do texto branco */
+}
+
+.calculator {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #2c9c6c; /* Cor de fundo verde escuro */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s; /* Animação de transformação */
+}
+
+.calculator:hover {
+    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+}
+
+.calculator input[type="text"],
+.calculator input[type="button"] {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333; /* Cor de fundo cinza escuro */
+    color: #ffffff; /* Cor do texto branco */
+    outline: none;
+}
+
+.calculator input[type="button"] {
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Animação de mudança de cor de fundo */
+}
+
+.calculator input[type="button"]:hover {
+    background-color: #1e88e5; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+.calculator span {
+    color: #ffffff; /* Cor do texto em branco */
+    font-size: 16px;
+}
+
+.calculator input[type="text"]::placeholder {
+    color: #999999; /* Cor do placeholder em cinza */
+}

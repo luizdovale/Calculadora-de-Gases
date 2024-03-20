@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gás</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="input-container">
+            <label for="tankFactor">Fator do Tanque:</label>
+            <input type="text" id="tankFactor" placeholder="Insira o fator do tanque">
+        </div>
+        <div class="input-container">
+            <label for="tankSize">Polegadas Descarregadas:</label>
+            <input type="text" id="tankSize" placeholder="Insira as polegadas descarregadas">
+        </div>
+        <input type="button" class="equals" value="Calcular" onclick="calculateGas()">
+        <div class="result-container">
+            <input type="text" id="liquidWeightDisplay" placeholder="Peso Líquido (kg)" disabled>
+            <input type="text" id="display" placeholder="Resultado (m³)" disabled>
+        </div>
+        <input type="button" class="clear" value="Limpar" onclick="clearAll()">
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
