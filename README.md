@@ -1,1 +1,1 @@
-calculadora para converter gases, no momento esta sendo desenvolvida apenas para nitrogenio(LIN)
+calculadora para converter gases N2 & O2.
