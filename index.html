@@ -19,6 +19,8 @@
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding-bottom: 60px;
         }
 
         .calculator-header {
@@ -27,13 +29,15 @@
         }
 
         .calculator-header h2 {
-            color: #f3980f; //#2c9c6c
+            color: #f3980f;
             font-weight: bold;
         }
 
         input[type="text"], button {
-            width: calc(100% - 40px);
-            margin-bottom: 10px;
+            width: calc(100% - 10px);
+            box-sizing: border-box;
+            margin: 5px auto;
+            display: block;
             padding: 15px;
             border: none;
             border-radius: 10px;
@@ -52,14 +56,21 @@
         }
 
         input[type="text"]:disabled {
-            background-color: #fdf9f9;
+            background-color: #f0ebeb;
             color: #141313;
             cursor: not-allowed;
         }
 
+        /* Adicione esta classe para definir a cor de fundo dos botões de resultado */
+        .result-button {
+            background-color: white;
+        }
+
         footer p {
-            text-align: center;
-            margin-top: 20px;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
             font-size: 12px;
             color: #fff;
         }
@@ -72,13 +83,12 @@
         </div>
         <input type="text" id="fator" placeholder="Fator">
         <input type="text" id="polegadas" placeholder="Polegadas" onkeypress="if(event.keyCode==13) calculateNitrogenio()">
-        <div>
-            <button onclick="calculateNitrogenio()">Calcular LIN</button>
-            <button onclick="calculateOxigenio()">Calcular LOX</button>
-            <button onclick="resetFields()">Zerar</button>
-        </div>
-        <input type="text" id="pesoLiquido" placeholder="Peso Líquido" disabled>
-        <input type="text" id="m3" placeholder="m³" disabled>
+        <button onclick="calculateNitrogenio()">Calcular LIN</button>
+        <button onclick="calculateOxigenio()">Calcular LOX</button>
+        <button onclick="resetFields()">Zerar</button>
+        <!-- Adicione a classe result-button para os inputs de texto dos resultados -->
+        <input type="text" id="pesoLiquido" placeholder="Peso Líquido" class="result-button" disabled>
+        <input type="text" id="m3" placeholder="m³" class="result-button" disabled>
         <footer>
             <p>@macedoovale</p>
         </footer>
