@@ -11,16 +11,18 @@ function calculateNitrogenio() {
     // Calcula o peso líquido para o Nitrogênio
     let pesoLiquido = (fator * polegadas) / 0.862;
 
+    // Arredonda o peso líquido para cima
+    pesoLiquido = Math.ceil(pesoLiquido);
+
     // Calcula m³ para o Nitrogênio
     let m3 = pesoLiquido * 0.862;
 
-    // Arredonda os valores para cima
-    pesoLiquido = Math.floor(pesoLiquido);
-    m3 = Math.floor(m3);
+    // Arredonda o peso líquido para cima
+    pesoLiquido = Math.ceil(pesoLiquido);
 
     // Exibe os resultados nos campos de texto
-    document.getElementById('pesoLiquido').value = pesoLiquido + " kg";
-    document.getElementById('m3').value = m3 + " m³";
+    document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
+    document.getElementById('m3').value = m3.toFixed(3) + " m³";
 }
 
 function calculateOxigenio() {
@@ -36,16 +38,18 @@ function calculateOxigenio() {
     // Calcula o peso líquido para o Oxigênio
     let pesoLiquido = (fator * polegadas) / 0.754;
 
+    // Arredonda o peso líquido para cima
+    pesoLiquido = Math.ceil(pesoLiquido);
+
     // Calcula m³ para o Oxigênio
     let m3 = pesoLiquido * 0.754;
 
-    // Arredonda os valores para cima
-    pesoLiquido = Math.floor(pesoLiquido);
-    m3 = Math.floor(m3);
+    // Arredonda o peso líquido para cima
+    pesoLiquido = Math.ceil(pesoLiquido);
 
     // Exibe os resultados nos campos de texto
-    document.getElementById('pesoLiquido').value = pesoLiquido + " kg";
-    document.getElementById('m3').value = m3 + " m³";
+    document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
+    document.getElementById('m3').value = m3.toFixed(3) + " m³";
 }
 
 function resetFields() {
