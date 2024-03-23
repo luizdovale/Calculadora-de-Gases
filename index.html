@@ -117,13 +117,13 @@
             let pesoLiquido = (fator * polegadas) / 0.862;
 
             // Arredonda o peso líquido para cima
-            pesoLiquido = Math.floor(pesoLiquido);
+            pesoLiquido = Math.ceil(pesoLiquido);
 
             // Calcula m³ para o Nitrogênio
             let m3 = pesoLiquido * 0.862;
 
             // Arredonda o peso líquido para cima
-            pesoLiquido = Math.floor(pesoLiquido);
+            pesoLiquido = Math.ceil(pesoLiquido);
 
             // Exibe os resultados nos campos de texto
             document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
@@ -144,13 +144,13 @@
             let pesoLiquido = (fator * polegadas) / 0.754;
 
             // Arredonda o peso líquido para cima
-            pesoLiquido = Math.floor(pesoLiquido);
+            pesoLiquido = Math.ceil(pesoLiquido);
 
             // Calcula m³ para o Oxigênio
             let m3 = pesoLiquido * 0.754;
 
             // Arredonda o peso líquido para cima
-            pesoLiquido = Math.floor(pesoLiquido);
+            pesoLiquido = Math.ceil(pesoLiquido);
 
             // Exibe os resultados nos campos de texto
             document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
