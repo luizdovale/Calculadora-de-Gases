@@ -85,12 +85,13 @@
         <input type="text" id="polegadas" placeholder="Polegadas" onkeypress="handleInput(event)" onkeydown="if(event.keyCode==13) calculateNitrogenio()">
         <button onclick="calculateNitrogenio()">Calcular LIN</button>
         <button onclick="calculateOxigenio()">Calcular LOX</button>
-        <button onclick="resetFields()">Zerar</button>
+        <button onclick="calculateArgonio()">Calcular LAR</button>
+        <button onclick="resetFields()">LIMPAR/REFAZER</button>
         <!-- Adicione a classe result-button para os inputs de texto dos resultados -->
         <input type="text" id="pesoLiquido" placeholder="Peso Líquido" class="result-button" disabled>
         <input type="text" id="m3" placeholder="m³" class="result-button" disabled>
         <footer>
-            <p>®macedovale</p>
+            <p>®️macedovale</p>
         </footer>
     </div>
 
@@ -107,6 +108,10 @@
             const fator = parseFloat(document.getElementById('fator').value);
             const polegadas = parseFloat(document.getElementById('polegadas').value);
 
+            function removeTrailingZeros(value) {
+    return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
+}
+
             // Verifica se os valores de entrada são válidos
             if (isNaN(fator) || isNaN(polegadas)) {
                 alert("Por favor, insira valores válidos para fator e polegadas.");
@@ -122,47 +127,75 @@
             // Calcula m³ para o Nitrogênio
             let m3 = pesoLiquido * 0.862;
 
-            // Arredonda o peso líquido para cima
-            pesoLiquido = Math.ceil(pesoLiquido);
-
             // Exibe os resultados nos campos de texto
             document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
-            document.getElementById('m3').value = m3.toFixed(3) + " m³";
+            document.getElementById('m3').value = removeTrailingZeros(m3.toFixed(3)) + " m³";
         }
 
         function calculateOxigenio() {
             const fator = parseFloat(document.getElementById('fator').value);
-            const polegadas = parseFloat(document.getElementById('polegadas').value);
+            const polegadas = parseFloat(document.getElementById('polegadas').
+            value);
 
-            // Verifica se os valores de entrada são válidos
-            if (isNaN(fator) || isNaN(polegadas)) {
-                alert("Por favor, insira valores válidos para fator e polegadas.");
-                return;
-            }
+            function removeTrailingZeros(value) {
+    return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
+}
 
-            // Calcula o peso líquido para o Oxigênio
-            let pesoLiquido = (fator * polegadas) / 0.754;
+// Verifica se os valores de entrada são válidos
+if (isNaN(fator) || isNaN(polegadas)) {
+    alert("Por favor, insira valores válidos para fator e polegadas.");
+    return;
+}
 
-            // Arredonda o peso líquido para cima
-            pesoLiquido = Math.ceil(pesoLiquido);
+// Calcula o peso líquido para o Oxigênio
+let pesoLiquido = (fator * polegadas) / 0.754;
 
-            // Calcula m³ para o Oxigênio
-            let m3 = pesoLiquido * 0.754;
+// Arredonda o peso líquido para cima
+pesoLiquido = Math.ceil(pesoLiquido);
 
-            // Arredonda o peso líquido para cima
-            pesoLiquido = Math.ceil(pesoLiquido);
+// Calcula m³ para o Oxigênio
+let m3 = pesoLiquido * 0.754;
 
-            // Exibe os resultados nos campos de texto
-            document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
-            document.getElementById('m3').value = m3.toFixed(3) + " m³";
-        }
+// Exibe os resultados nos campos de texto
+document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
+document.getElementById('m3').value = removeTrailingZeros(m3.toFixed(3)) + " m³";
+}
 
-        function resetFields() {
-            document.getElementById('fator').value = "";
-            document.getElementById('polegadas').value = "";
-            document.getElementById('pesoLiquido').value = "";
-            document.getElementById('m3').value = "";
-        }
-    </script>
+        function calculateArgonio() {
+            const fator = parseFloat(document.getElementById('fator').value);
+            const polegadas = parseFloat(document.getElementById('polegadas').
+            value);
+
+            function removeTrailingZeros(value) {
+    return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
+}
+
+// Verifica se os valores de entrada são válidos
+if (isNaN(fator) || isNaN(polegadas)) {
+    alert("Por favor, insira valores válidos para fator e polegadas.");
+    return;
+}
+
+// Calcula o peso líquido para o Argônio
+let pesoLiquido = (fator * polegadas) / 0.604;
+
+// Arredonda o peso líquido para cima
+pesoLiquido = Math.ceil(pesoLiquido);
+
+// Calcula m³ para o Argônio
+let m3 = pesoLiquido * 0.604;
+
+// Exibe os resultados nos campos de texto
+document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
+document.getElementById('m3').value = removeTrailingZeros(m3.toFixed(3)) + " m³";
+}
+
+function resetFields() {
+document.getElementById('fator').value = "";
+document.getElementById('polegadas').value = "";
+document.getElementById('pesoLiquido').value = "";
+document.getElementById('m3').value = "";
+}
+</script>
 </body>
 </html>
