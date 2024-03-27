@@ -1,14 +1,16 @@
-function handleInput(event) {
-    // Verifica se o caractere digitado é uma vírgula e substitui por ponto
-    if (event.key === ',') {
-        event.target.value += '.';
-        event.preventDefault();
-    }
+function handleInput(inputElement) {
+    // Substitui vírgulas por pontos no valor do campo
+    let value = inputElement.value;
+    inputElement.value = value.replace(/,/g, '.');
 }
 
 function calculateNitrogenio() {
     const fator = parseFloat(document.getElementById('fator').value);
     const polegadas = parseFloat(document.getElementById('polegadas').value);
+
+    function removeTrailingZeros(value) {
+        return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
+    }
 
     // Verifica se os valores de entrada são válidos
     if (isNaN(fator) || isNaN(polegadas)) {
@@ -27,12 +29,16 @@ function calculateNitrogenio() {
 
     // Exibe os resultados nos campos de texto
     document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
-    document.getElementById('m3').value = m3.toFixed(3) + " m³";
+    document.getElementById('m3').value = removeTrailingZeros(m3.toFixed(3)) + " m³";
 }
 
 function calculateOxigenio() {
     const fator = parseFloat(document.getElementById('fator').value);
     const polegadas = parseFloat(document.getElementById('polegadas').value);
+
+    function removeTrailingZeros(value) {
+        return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
+    }
 
     // Verifica se os valores de entrada são válidos
     if (isNaN(fator) || isNaN(polegadas)) {
@@ -51,12 +57,16 @@ function calculateOxigenio() {
 
     // Exibe os resultados nos campos de texto
     document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
-    document.getElementById('m3').value = m3.toFixed(3) + " m³";
+    document.getElementById('m3').value = removeTrailingZeros(m3.toFixed(3)) + " m³";
 }
 
 function calculateArgonio() {
     const fator = parseFloat(document.getElementById('fator').value);
     const polegadas = parseFloat(document.getElementById('polegadas').value);
+
+    function removeTrailingZeros(value) {
+        return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
+    }
 
     // Verifica se os valores de entrada são válidos
     if (isNaN(fator) || isNaN(polegadas)) {
@@ -70,8 +80,12 @@ function calculateArgonio() {
     // Arredonda o peso líquido para cima
     pesoLiquido = Math.ceil(pesoLiquido);
 
-    // Exibe o resultado no campo de texto do peso líquido
+    // Calcula m³ para o Argônio
+    let m3 = pesoLiquido * 0.604;
+
+    // Exibe os resultados nos campos de texto
     document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
+    document.getElementById('m3').value = removeTrailingZeros(m3.toFixed(3)) + " m³";
 }
 
 function resetFields() {
