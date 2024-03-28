@@ -76,4 +76,3 @@ function resetFields() {
     document.getElementById('pesoLiquido').value = "";
     document.getElementById('m3').value = "";
 }
-HTML
