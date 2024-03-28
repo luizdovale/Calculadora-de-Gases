@@ -12,47 +12,46 @@ scale=1.0">
             margin: 0;
             padding: 0;
 }
+        .calculator {
+            width: 300px;
+            margin: 50px auto;
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding-bottom: 60px;
+        }
+        .calculator-header {
 
-  .calculator {
-    width: 300px;
-    margin: 50px auto;
-    background-color: #222;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    padding-bottom: 60px;
+              text-align: center;
+            margin-bottom: 20px;
+        }
+        .calculator-header h2 {
+            color: #f3980f;
+            font-weight: bold;
+        }
+        input[type="text"], button {
+            width: calc(100% - 10px);
+            box-sizing: border-box;
+            margin: 5px auto;
+            display: block;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000000;
 }
-.calculator-header {
-    text-align: center;
-    margin-bottom: 20px;
+        button {
+            background-color: #f3980f;
+            cursor: pointer;
 }
-.calculator-header h2 {
-    color: #f3980f;
-    font-weight: bold;
+        button:hover {
+            background-color: #f3980f;
 }
-input[type="text"], button {
-    width: calc(100% - 10px);
-    box-sizing: border-box;
-    margin: 5px auto;
-    display: block;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #000000;
-}
-button {
-    background-color: #f3980f;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #f3980f;
-}
-input[type="text"]:disabled {
-
-              background-color: #ffffff;
+        input[type="text"]:disabled {
+            background-color: #ffffff;
             color: #141313;
             cursor: not-allowed;
 }
@@ -61,14 +60,15 @@ botões de resultado */
         .result-button {
             background-color: white;
 }
-        footer p {
-            position: absolute;
+footer p {
+
+              position: absolute;
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
             font-size: 12px;
             color: #fff;
-}
+        }
     </style>
 </head>
 <body>
@@ -84,7 +84,8 @@ calculateNitrogenio()">
         <button onclick="calculateNitrogenio()">Calcular
 LIN</button>
         <button onclick="calculateOxigenio()">Calcular LOX</button>
-        <button onclick="resetFields()">Zerar</button>
+        <button onclick="calculateArgonio()">Calcular LAR</button>
+        <button onclick="resetFields()">LIMPAR/REFAZER</button>
         <!-- Adicione a classe result-button para os inputs de
 texto dos resultados -->
         <input type="text" id="pesoLiquido" placeholder="Peso
@@ -92,10 +93,9 @@ Líquido" class="result-button" disabled>
         <input type="text" id="m3" placeholder="m3" class="result-
 button" disabled>
         <footer>
-            <p>macedovale</p>
-</footer>
-
-  </div>
+            <p>® macedovale</p>
+        </footer>
+    </div>
     <script>
         function handleInput(event) {
             // Verifica se o caractere digitado é uma vírgula e
@@ -104,60 +104,95 @@ substitui por ponto
                 event.target.value += '.';
                 event.preventDefault();
 } }
-        function calculateNitrogenio() {
+
+          function calculateNitrogenio() {
             const fator =
 parseFloat(document.getElementById('fator').value);
             const polegadas =
 parseFloat(document.getElementById('polegadas').value);
-            // Verifica se os valores de entrada são válidos
-            if (isNaN(fator) || isNaN(polegadas)) {
-                alert("Por favor, insira valores válidos para fator
+            function removeTrailingZeros(value) {
+    return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
+}
+// Verifica se os valores de entrada são válidos
+if (isNaN(fator) || isNaN(polegadas)) {
+    alert("Por favor, insira valores válidos para fator
 e polegadas.");
                 return;
 }
             // Calcula o peso líquido para o Nitrogênio
             let pesoLiquido = (fator * polegadas) / 0.862;
             // Arredonda o peso líquido para cima
-            pesoLiquido = Math.floor(pesoLiquido);
+            pesoLiquido = Math.ceil(pesoLiquido);
             // Calcula m3 para o Nitrogênio
             let m3 = pesoLiquido * 0.862;
-            // Arredonda o peso líquido para cima
-            pesoLiquido = Math.floor(pesoLiquido);
             // Exibe os resultados nos campos de texto
             document.getElementById('pesoLiquido').value =
 pesoLiquido.toFixed(0) + " kg";
-m3";
-    document.getElementById('m3').value = m3.toFixed(3) + "
+            document.getElementById('m3').value =
+removeTrailingZeros(m3.toFixed(3)) + " m3";
 }
-
-          function calculateOxigenio() {
+        function calculateOxigenio() {
             const fator =
 parseFloat(document.getElementById('fator').value);
             const polegadas =
-parseFloat(document.getElementById('polegadas').value);
-            // Verifica se os valores de entrada são válidos
-            if (isNaN(fator) || isNaN(polegadas)) {
-                alert("Por favor, insira valores válidos para fator
-e polegadas.");
-                return;
+parseFloat(document.getElementById('polegadas').
+            value);
+            function removeTrailingZeros(value) {
+    return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
 }
-            // Calcula o peso líquido para o Oxigênio
-            let pesoLiquido = (fator * polegadas) / 0.754;
-            // Arredonda o peso líquido para cima
-            pesoLiquido = Math.floor(pesoLiquido);
-            // Calcula m3 para o Oxigênio
-            let m3 = pesoLiquido * 0.754;
-            // Arredonda o peso líquido para cima
-            pesoLiquido = Math.floor(pesoLiquido);
-            // Exibe os resultados nos campos de texto
-            document.getElementById('pesoLiquido').value =
+
+  // Verifica se os valores de entrada são válidos
+if (isNaN(fator) || isNaN(polegadas)) {
+    alert("Por favor, insira valores válidos para fator e
+polegadas.");
+    return;
+}
+// Calcula o peso líquido para o Oxigênio
+let pesoLiquido = (fator * polegadas) / 0.754;
+// Arredonda o peso líquido para cima
+pesoLiquido = Math.ceil(pesoLiquido);
+// Calcula m3 para o Oxigênio
+let m3 = pesoLiquido * 0.754;
+// Exibe os resultados nos campos de texto
+document.getElementById('pesoLiquido').value =
 pesoLiquido.toFixed(0) + " kg";
-            document.getElementById('m3').value = m3.toFixed(3) + "
-        }
-        function resetFields() {
-            document.getElementById('fator').value = "";
-            document.getElementById('polegadas').value = "";
-            document.getElementById('pesoLiquido').value = "";
-            document.getElementById('m3').value = "";
+document.getElementById('m3').value =
+removeTrailingZeros(m3.toFixed(3)) + " m3";
 }
-    </script>
+        function calculateArgonio() {
+            const fator =
+parseFloat(document.getElementById('fator').value);
+            const polegadas =
+parseFloat(document.getElementById('polegadas').
+            value);
+            function removeTrailingZeros(value) {
+    return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
+}
+// Verifica se os valores de entrada são válidos
+if (isNaN(fator) || isNaN(polegadas)) {
+    alert("Por favor, insira valores válidos para fator e
+polegadas.");
+    return;
+}
+// Calcula o peso líquido para o Argônio
+let pesoLiquido = (fator * polegadas) / 0.604;
+
+  // Arredonda o peso líquido para cima
+pesoLiquido = Math.ceil(pesoLiquido);
+// Calcula m3 para o Argônio
+let m3 = pesoLiquido * 0.604;
+// Exibe os resultados nos campos de texto
+document.getElementById('pesoLiquido').value =
+pesoLiquido.toFixed(0) + " kg";
+document.getElementById('m3').value =
+removeTrailingZeros(m3.toFixed(3)) + " m3";
+}
+function resetFields() {
+document.getElementById('fator').value = "";
+document.getElementById('polegadas').value = "";
+document.getElementById('pesoLiquido').value = "";
+document.getElementById('m3').value = "";
+}
+</script>
+</body>
+</html>
