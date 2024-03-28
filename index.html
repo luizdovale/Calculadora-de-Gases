@@ -2,8 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-
-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CALCULADORA DE GASES</title>
     <style>
         body {
@@ -11,7 +10,8 @@ scale=1.0">
             background-color: #fcf9f9;
             margin: 0;
             padding: 0;
-}
+        }
+
         .calculator {
             width: 300px;
             margin: 50px auto;
@@ -22,15 +22,17 @@ scale=1.0">
             position: relative;
             padding-bottom: 60px;
         }
-        .calculator-header {
 
-              text-align: center;
+        .calculator-header {
+            text-align: center;
             margin-bottom: 20px;
         }
+
         .calculator-header h2 {
             color: #f3980f;
             font-weight: bold;
         }
+
         input[type="text"], button {
             width: calc(100% - 10px);
             box-sizing: border-box;
@@ -42,27 +44,30 @@ scale=1.0">
             font-size: 16px;
             font-weight: bold;
             color: #000000;
-}
+        }
+
         button {
             background-color: #f3980f;
             cursor: pointer;
-}
+        }
+
         button:hover {
             background-color: #f3980f;
-}
+        }
+
         input[type="text"]:disabled {
             background-color: #ffffff;
             color: #141313;
             cursor: not-allowed;
-}
-        /* Adicione esta classe para definir a cor de fundo dos
-botões de resultado */
+        }
+
+        /* Adicione esta classe para definir a cor de fundo dos botões de resultado */
         .result-button {
             background-color: white;
-}
-footer p {
+        }
 
-              position: absolute;
+        footer p {
+            position: absolute;
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
@@ -75,118 +80,116 @@ footer p {
     <div class="calculator">
         <div class="calculator-header">
             <h2>CALCULADORA DE GASES</h2>
-</div>
-        <input type="text" id="fator" placeholder="Fator"
-onkeypress="handleInput(event)">
-        <input type="text" id="polegadas" placeholder="Polegadas"
-onkeypress="handleInput(event)" onkeydown="if(event.keyCode==13)
-calculateNitrogenio()">
-        <button onclick="calculateNitrogenio()">Calcular
-LIN</button>
+        </div>
+        <input type="text" id="fator" placeholder="Fator" onkeypress="handleInput(event)">
+        <input type="text" id="polegadas" placeholder="Polegadas" onkeypress="handleInput(event)" onkeydown="if(event.keyCode==13) calculateNitrogenio()">
+        <button onclick="calculateNitrogenio()">Calcular LIN</button>
         <button onclick="calculateOxigenio()">Calcular LOX</button>
         <button onclick="calculateArgonio()">Calcular LAR</button>
         <button onclick="resetFields()">LIMPAR/REFAZER</button>
-        <!-- Adicione a classe result-button para os inputs de
-texto dos resultados -->
-        <input type="text" id="pesoLiquido" placeholder="Peso
-Líquido" class="result-button" disabled>
-        <input type="text" id="m3" placeholder="m3" class="result-
-button" disabled>
+        <!-- Adicione a classe result-button para os inputs de texto dos resultados -->
+        <input type="text" id="pesoLiquido" placeholder="Peso Líquido" class="result-button" disabled>
+        <input type="text" id="m3" placeholder="m³" class="result-button" disabled>
         <footer>
-            <p>® macedovale</p>
+            <p>®️• macedovale •</p>
         </footer>
     </div>
+
     <script>
         function handleInput(event) {
-            // Verifica se o caractere digitado é uma vírgula e
-substitui por ponto
+            // Verifica se o caractere digitado é uma vírgula e substitui por ponto
             if (event.key === ',') {
                 event.target.value += '.';
                 event.preventDefault();
-} }
+            }
+        }
 
-          function calculateNitrogenio() {
-            const fator =
-parseFloat(document.getElementById('fator').value);
-            const polegadas =
-parseFloat(document.getElementById('polegadas').value);
+        function calculateNitrogenio() {
+            const fator = parseFloat(document.getElementById('fator').value);
+            const polegadas = parseFloat(document.getElementById('polegadas').value);
+
             function removeTrailingZeros(value) {
     return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
 }
-// Verifica se os valores de entrada são válidos
-if (isNaN(fator) || isNaN(polegadas)) {
-    alert("Por favor, insira valores válidos para fator
-e polegadas.");
+
+            // Verifica se os valores de entrada são válidos
+            if (isNaN(fator) || isNaN(polegadas)) {
+                alert("Por favor, insira valores válidos para fator e polegadas.");
                 return;
-}
+            }
+
             // Calcula o peso líquido para o Nitrogênio
             let pesoLiquido = (fator * polegadas) / 0.862;
+
             // Arredonda o peso líquido para cima
             pesoLiquido = Math.ceil(pesoLiquido);
-            // Calcula m3 para o Nitrogênio
+
+            // Calcula m³ para o Nitrogênio
             let m3 = pesoLiquido * 0.862;
+
             // Exibe os resultados nos campos de texto
-            document.getElementById('pesoLiquido').value =
-pesoLiquido.toFixed(0) + " kg";
-            document.getElementById('m3').value =
-removeTrailingZeros(m3.toFixed(3)) + " m3";
-}
+            document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
+            document.getElementById('m3').value = removeTrailingZeros(m3.toFixed(3)) + " m³";
+        }
+
         function calculateOxigenio() {
-            const fator =
-parseFloat(document.getElementById('fator').value);
-            const polegadas =
-parseFloat(document.getElementById('polegadas').
+            const fator = parseFloat(document.getElementById('fator').value);
+            const polegadas = parseFloat(document.getElementById('polegadas').
             value);
+
             function removeTrailingZeros(value) {
     return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
 }
 
-  // Verifica se os valores de entrada são válidos
+// Verifica se os valores de entrada são válidos
 if (isNaN(fator) || isNaN(polegadas)) {
-    alert("Por favor, insira valores válidos para fator e
-polegadas.");
+    alert("Por favor, insira valores válidos para fator e polegadas.");
     return;
 }
+
 // Calcula o peso líquido para o Oxigênio
 let pesoLiquido = (fator * polegadas) / 0.754;
+
 // Arredonda o peso líquido para cima
 pesoLiquido = Math.ceil(pesoLiquido);
-// Calcula m3 para o Oxigênio
+
+// Calcula m³ para o Oxigênio
 let m3 = pesoLiquido * 0.754;
+
 // Exibe os resultados nos campos de texto
-document.getElementById('pesoLiquido').value =
-pesoLiquido.toFixed(0) + " kg";
-document.getElementById('m3').value =
-removeTrailingZeros(m3.toFixed(3)) + " m3";
+document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
+document.getElementById('m3').value = removeTrailingZeros(m3.toFixed(3)) + " m³";
 }
+
         function calculateArgonio() {
-            const fator =
-parseFloat(document.getElementById('fator').value);
-            const polegadas =
-parseFloat(document.getElementById('polegadas').
+            const fator = parseFloat(document.getElementById('fator').value);
+            const polegadas = parseFloat(document.getElementById('polegadas').
             value);
+
             function removeTrailingZeros(value) {
     return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
 }
+
 // Verifica se os valores de entrada são válidos
 if (isNaN(fator) || isNaN(polegadas)) {
-    alert("Por favor, insira valores válidos para fator e
-polegadas.");
+    alert("Por favor, insira valores válidos para fator e polegadas.");
     return;
 }
+
 // Calcula o peso líquido para o Argônio
 let pesoLiquido = (fator * polegadas) / 0.604;
 
-  // Arredonda o peso líquido para cima
+// Arredonda o peso líquido para cima
 pesoLiquido = Math.ceil(pesoLiquido);
-// Calcula m3 para o Argônio
+
+// Calcula m³ para o Argônio
 let m3 = pesoLiquido * 0.604;
+
 // Exibe os resultados nos campos de texto
-document.getElementById('pesoLiquido').value =
-pesoLiquido.toFixed(0) + " kg";
-document.getElementById('m3').value =
-removeTrailingZeros(m3.toFixed(3)) + " m3";
+document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
+document.getElementById('m3').value = removeTrailingZeros(m3.toFixed(3)) + " m³";
 }
+
 function resetFields() {
 document.getElementById('fator').value = "";
 document.getElementById('polegadas').value = "";
@@ -196,3 +199,4 @@ document.getElementById('m3').value = "";
 </script>
 </body>
 </html>
+
