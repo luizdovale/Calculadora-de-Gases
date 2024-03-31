@@ -20,7 +20,7 @@ function calculateNitrogenio() {
     let pesoLiquido = (fator * polegadas) / 0.862;
 
     // Arredonda o peso líquido para cima
-    pesoLiquido = Math.ceil(pesoLiquido);
+    pesoLiquido = Math.round(pesoLiquido);
 
     // Calcula m³ para o Nitrogênio
     let m3 = pesoLiquido * 0.862;
@@ -44,7 +44,7 @@ function calculateOxigenio() {
     let pesoLiquido = (fator * polegadas) / 0.754;
 
     // Arredonda o peso líquido para cima
-    pesoLiquido = Math.ceil(pesoLiquido);
+    pesoLiquido = Math.round(pesoLiquido);
 
     // Calcula m³ para o Oxigênio
     let m3 = pesoLiquido * 0.754;
@@ -68,7 +68,7 @@ function calculateArgonio() {
     let pesoLiquido = (fator * polegadas) / 0.604;
 
     // Arredonda o peso líquido para cima
-    pesoLiquido = Math.ceil(pesoLiquido);
+    pesoLiquido = Math.round(pesoLiquido);
 
     // Exibe o resultado no campo de texto do peso líquido
     document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
