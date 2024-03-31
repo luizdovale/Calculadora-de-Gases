@@ -1,6 +1,6 @@
 function handleInput(event) {
     // Verifica se o caractere digitado é uma vírgula e substitui por ponto
-    if (event.key === ',') {
+    if (event.key === ',' || event.key === '.') {
         event.target.value += '.';
         event.preventDefault();
     }
