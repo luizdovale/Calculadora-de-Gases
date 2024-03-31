@@ -91,18 +91,18 @@
         <input type="text" id="pesoLiquido" placeholder="Peso Líquido" class="result-button" disabled>
         <input type="text" id="m3" placeholder="m³" class="result-button" disabled>
         <footer>
-            <p>®️macedovale</p>
+            <p>• macedovale •</p>
         </footer>
     </div>
 
     <script>
         function handleInput(event) {
-            // Verifica se o caractere digitado é uma vírgula e substitui por ponto
-            if (event.key === ',') {
-                event.target.value += '.';
-                event.preventDefault();
-            }
-        }
+    // Verifica se o caractere digitado é uma vírgula e substitui por ponto
+    if (event.key === ',' || event.key === '.') {
+        event.target.value += '.';
+        event.preventDefault();
+    }
+}
 
         function calculateNitrogenio() {
             const fator = parseFloat(document.getElementById('fator').value);
