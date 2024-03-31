@@ -26,8 +26,8 @@ function calculateNitrogenio() {
     let m3 = pesoLiquido * 0.862;
 
     // Exibe os resultados nos campos de texto
-    document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
-    document.getElementById('m3').value = m3.toFixed(3) + " m³";
+    document.getElementById('pesoLiquido').value = pesoLiquido.toLocaleString('pt-BR') + " kg";
+    document.getElementById('m3').value = removeTrailingZeros(m3.toLocaleString('pt-BR', { maximumFractionDigits: 3 })) + " m³";
 }
 
 function calculateOxigenio() {
@@ -50,8 +50,8 @@ function calculateOxigenio() {
     let m3 = pesoLiquido * 0.754;
 
     // Exibe os resultados nos campos de texto
-    document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
-    document.getElementById('m3').value = m3.toFixed(3) + " m³";
+    document.getElementById('pesoLiquido').value = pesoLiquido.toLocaleString('pt-BR') + " kg";
+    document.getElementById('m3').value = removeTrailingZeros(m3.toLocaleString('pt-BR', { maximumFractionDigits: 3 })) + " m³";
 }
 
 function calculateArgonio() {
@@ -71,7 +71,8 @@ function calculateArgonio() {
     pesoLiquido = Math.round(pesoLiquido);
 
     // Exibe o resultado no campo de texto do peso líquido
-    document.getElementById('pesoLiquido').value = pesoLiquido.toFixed(0) + " kg";
+    document.getElementById('pesoLiquido').value = pesoLiquido.toLocaleString('pt-BR') + " kg";
+    document.getElementById('m3').value = removeTrailingZeros(m3.toLocaleString('pt-BR', { maximumFractionDigits: 3 })) + " m³";
 }
 
 function resetFields() {
