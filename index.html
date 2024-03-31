@@ -91,7 +91,7 @@
         <input type="text" id="pesoLiquido" placeholder="Peso Líquido" class="result-button" disabled>
         <input type="text" id="m3" placeholder="m³" class="result-button" disabled>
         <footer>
-            <p>• macedovale •</p>
+            <p>®️macedovale</p>
         </footer>
     </div>
 
@@ -122,7 +122,7 @@
             let pesoLiquido = (fator * polegadas) / 0.862;
 
             // Arredonda o peso líquido para cima
-            pesoLiquido = Math.ceil(pesoLiquido);
+            pesoLiquido = Math.round(pesoLiquido);
 
             // Calcula m³ para o Nitrogênio
             let m3 = pesoLiquido * 0.862;
@@ -151,7 +151,7 @@ if (isNaN(fator) || isNaN(polegadas)) {
 let pesoLiquido = (fator * polegadas) / 0.754;
 
 // Arredonda o peso líquido para cima
-pesoLiquido = Math.ceil(pesoLiquido);
+pesoLiquido = Math.round(pesoLiquido);
 
 // Calcula m³ para o Oxigênio
 let m3 = pesoLiquido * 0.754;
@@ -180,7 +180,7 @@ if (isNaN(fator) || isNaN(polegadas)) {
 let pesoLiquido = (fator * polegadas) / 0.604;
 
 // Arredonda o peso líquido para cima
-pesoLiquido = Math.ceil(pesoLiquido);
+pesoLiquido = Math.round(pesoLiquido);
 
 // Calcula m³ para o Argônio
 let m3 = pesoLiquido * 0.604;
