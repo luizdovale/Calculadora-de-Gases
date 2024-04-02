@@ -1,9 +1,6 @@
 function handleInput(event) {
-    // Verifica se o caractere digitado é uma vírgula e substitui por ponto
-    if (event.key === ',' || event.key === '.') {
-        event.target.value += '.';
-        event.preventDefault();
-    }
+    // Substitui todas as vírgulas por ponto
+    event.target.value = event.target.value.replace(/,/g, '.');
 }
 
 function calculateNitrogenio() {
