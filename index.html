@@ -81,8 +81,8 @@
         <div class="calculator-header">
             <h2>CALCULADORA DE GASES</h2>
         </div>
-        <input type="text" id="fator" placeholder="Fator" onkeypress="handleInput(event)">
-        <input type="text" id="polegadas" placeholder="Polegadas" onkeypress="handleInput(event)" onkeydown="if(event.keyCode==13) calculateNitrogenio()">
+        <input type="text" id="fator" placeholder="Fator" oninput="handleInput(event)">
+        <input type="text" id="polegadas" placeholder="Polegadas" oninput="handleInput(event)" onkeydown="if(event.keyCode==13) calculateNitrogenio()">
         <button onclick="calculateNitrogenio()">Calcular LIN</button>
         <button onclick="calculateOxigenio()">Calcular LOX</button>
         <button onclick="calculateArgonio()">Calcular LAR</button>
@@ -97,20 +97,17 @@
 
     <script>
         function handleInput(event) {
-    // Verifica se o caractere digitado é uma vírgula e substitui por ponto
-    if (event.key === ',' || event.key === '.') {
-        event.target.value += '.';
-        event.preventDefault();
-    }
-}
+            // Substitui vírgulas por pontos
+            event.target.value = event.target.value.replace(',', '.');
+        }
 
         function calculateNitrogenio() {
             const fator = parseFloat(document.getElementById('fator').value);
             const polegadas = parseFloat(document.getElementById('polegadas').value);
 
             function removeTrailingZeros(value) {
-    return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
-}
+                return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
+            }
 
             // Verifica se os valores de entrada são válidos
             if (isNaN(fator) || isNaN(polegadas)) {
@@ -134,69 +131,66 @@
 
         function calculateOxigenio() {
             const fator = parseFloat(document.getElementById('fator').value);
-            const polegadas = parseFloat(document.getElementById('polegadas').
-            value);
+            const polegadas = parseFloat(document.getElementById('polegadas').value);
 
             function removeTrailingZeros(value) {
-    return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
-}
+                return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
+            }
 
-// Verifica se os valores de entrada são válidos
-if (isNaN(fator) || isNaN(polegadas)) {
-    alert("Por favor, insira valores válidos para fator e polegadas.");
-    return;
-}
+            // Verifica se os valores de entrada são válidos
+            if (isNaN(fator) || isNaN(polegadas)) {
+                alert("Por favor, insira valores válidos para fator e polegadas.");
+                return;
+            }
 
-// Calcula o peso líquido para o Oxigênio
-let pesoLiquido = (fator * polegadas) / 0.754;
+            // Calcula o peso líquido para o Oxigênio
+            let pesoLiquido = (fator * polegadas) / 0.754;
 
-// Arredonda o peso líquido para cima
-pesoLiquido = Math.round(pesoLiquido);
+            // Arredonda o peso líquido para cima
+            pesoLiquido = Math.round(pesoLiquido);
 
-// Calcula m³ para o Oxigênio
-let m3 = pesoLiquido * 0.754;
+            // Calcula m³ para o Oxigênio
+            let m3 = pesoLiquido * 0.754;
 
-// Exibe os resultados nos campos de texto
-document.getElementById('pesoLiquido').value = pesoLiquido.toLocaleString('pt-BR') + " kg";
-document.getElementById('m3').value = removeTrailingZeros(m3.toLocaleString('pt-BR', { maximumFractionDigits: 3 })) + " m³";
-}
+            // Exibe os resultados nos campos de texto
+            document.getElementById('pesoLiquido').value = pesoLiquido.toLocaleString('pt-BR') + " kg";
+            document.getElementById('m3').value = removeTrailingZeros(m3.toLocaleString('pt-BR', { maximumFractionDigits: 3 })) + " m³";
+        }
 
         function calculateArgonio() {
             const fator = parseFloat(document.getElementById('fator').value);
-            const polegadas = parseFloat(document.getElementById('polegadas').
-            value);
+            const polegadas = parseFloat(document.getElementById('polegadas').value);
 
             function removeTrailingZeros(value) {
-    return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
-}
+                return value.replace(/(\.0+|(\.\d+?)0+)$/, '$2');
+            }
 
-// Verifica se os valores de entrada são válidos
-if (isNaN(fator) || isNaN(polegadas)) {
-    alert("Por favor, insira valores válidos para fator e polegadas.");
-    return;
-}
+            // Verifica se os valores de entrada são válidos
+            if (isNaN(fator) || isNaN(polegadas)) {
+                alert("Por favor, insira valores válidos para fator e polegadas.");
+                return;
+            }
 
-// Calcula o peso líquido para o Argônio
-let pesoLiquido = (fator * polegadas) / 0.604;
+            // Calcula o peso líquido para o Argônio
+            let pesoLiquido = (fator * polegadas) / 0.604;
 
-// Arredonda o peso líquido para cima
-pesoLiquido = Math.round(pesoLiquido);
+            // Arredonda o peso líquido para cima
+            pesoLiquido = Math.round(pesoLiquido);
 
-// Calcula m³ para o Argônio
-let m3 = pesoLiquido * 0.604;
+            // Calcula m³ para o Argônio
+            let m3 = pesoLiquido * 0.604;
 
-// Exibe os resultados nos campos de texto
-document.getElementById('pesoLiquido').value = pesoLiquido.toLocaleString('pt-BR') + " kg";
-document.getElementById('m3').value = removeTrailingZeros(m3.toLocaleString('pt-BR', { maximumFractionDigits: 3 })) + " m³";
-}
+            // Exibe os resultados nos campos de texto
+            document.getElementById('pesoLiquido').value = pesoLiquido.toLocaleString('pt-BR') + " kg";
+            document.getElementById('m3').value = removeTrailingZeros(m3.toLocaleString('pt-BR', { maximumFractionDigits: 3 })) + " m³";
+        }
 
-function resetFields() {
-document.getElementById('fator').value = "";
-document.getElementById('polegadas').value = "";
-document.getElementById('pesoLiquido').value = "";
-document.getElementById('m3').value = "";
-}
-</script>
+        function resetFields() {
+            document.getElementById('fator').value = "";
+            document.getElementById('polegadas').value = "";
+            document.getElementById('pesoLiquido').value = "";
+            document.getElementById('m3').value = "";
+        }
+    </script>
 </body>
 </html>
-
