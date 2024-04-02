@@ -81,8 +81,8 @@
         <div class="calculator-header">
             <h2>CALCULADORA DE GASES</h2>
         </div>
-        <input type="number" id="fator" placeholder="Fator" onkeypress="handleInput(event)">
-        <input type="number" id="polegadas" placeholder="Polegadas" onkeypress="handleInput(event)" onkeydown="if(event.keyCode==13) calculateNitrogenio()">
+        <input type="number" id="fator" inputmode="numeric" placeholder="Fator" onkeypress="handleInput(event)">
+        <input type="number" id="polegadas" inputmode="numeric" placeholder="Polegadas" onkeypress="handleInput(event)" onkeydown="if(event.keyCode==13) calculateNitrogenio()">
         <button onclick="calculateNitrogenio()">Calcular LIN</button>
         <button onclick="calculateOxigenio()">Calcular LOX</button>
         <button onclick="calculateArgonio()">Calcular LAR</button>
