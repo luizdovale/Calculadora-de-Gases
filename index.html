@@ -79,24 +79,25 @@
     </style>
 </head>
 <body>
-   <div class="calculator">
-    <div class="calculator-header">
-        <h2>CALCULADORA DE GASES</h2>
+    <div class="calculator">
+        <div class="calculator-header">
+            <h2>CALCULADORA DE GASES</h2>
+        </div>
+        <input type="text" id="fator" placeholder="Fator" oninput="handleInput(event)">
+        <input type="text" id="polegadas" placeholder="Polegadas" oninput="handleInput(event)" onkeydown="if(event.keyCode==13) calculateNitrogenio()">
+        <button onclick="calculateNitrogenio()">Calcular LIN</button>
+        <button onclick="calculateOxigenio()">Calcular LOX</button>
+        <button onclick="calculateArgonio()">Calcular LAR</button>
+        <button onclick="resetFields()">LIMPAR</button>
+        <!-- Adicione a classe result-button para os inputs de texto dos resultados -->
+        <input type="text" id="pesoLiquido" placeholder="Peso Líquido" class="result-button" disabled>
+        <input type="text" id="m3" placeholder="m³" class="result-button" disabled>
+        <footer>
+            <p>luizdovale - versão 1.0.24</p>
+              
+        </footer>
     </div>
-    <input type="number" id="fator" placeholder="Fator" oninput="handleInput(event)">
-    <input type="number" id="polegadas" placeholder="Polegadas" oninput="handleInput(event)" onkeydown="if(event.keyCode==13) calculateNitrogenio()">
-    <button onclick="calculateNitrogenio()">Calcular LIN</button>
-    <button onclick="calculateOxigenio()">Calcular LOX</button>
-    <button onclick="calculateArgonio()">Calcular LAR</button>
-    <button onclick="resetFields()">LIMPAR</button>
-    <!-- Adicione a classe result-button para os inputs de texto dos resultados -->
-    <input type="text" id="pesoLiquido" placeholder="Peso Líquido" class="result-button" disabled>
-    <input type="text" id="m3" placeholder="m³" class="result-button" disabled>
-    <footer>
-        <p>luizdovale - versão 1.0.24</p>
-    </footer>
-</div>
-
+   
     <script>
         function handleInput(event) {
             // Substitui vírgulas por pontos
