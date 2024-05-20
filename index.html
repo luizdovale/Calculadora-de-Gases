@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #fcf9f9;
+            background-color: rgba(193, 193, 193, 0.3);
             margin: 0;
             padding: 0;
         }
@@ -15,10 +15,10 @@
         .calculator {
             width: 300px;
             margin: 50px auto;
-            background-color: #222;
-            border-radius: 10px;
+            background-color: rgba(193, 193, 193, 0.6);
+            border-radius: 30px;
             padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
             position: relative;
             padding-bottom: 60px;
         }
@@ -29,7 +29,7 @@
         }
 
         .calculator-header h2 {
-            color: #f3980f;
+            color: #000000;
             font-weight: bold;
         }
 
@@ -47,12 +47,12 @@
         }
 
         button {
-            background-color: #f3980f;
+            background-color: rgba(48, 156, 108, 0.8);;
             cursor: pointer;
         }
 
         button:hover {
-            background-color: #f3980f;
+            background-color: #309C6C;
         }
 
         input[type="text"]:disabled {
@@ -71,8 +71,9 @@
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 12px;
-            color: #fff;
+            font-style: italic;
+            font-size: 10px;
+            color: #1b1a1a;
         }
     </style>
 </head>
@@ -86,12 +87,14 @@
         <button onclick="calculateNitrogenio()">Calcular LIN</button>
         <button onclick="calculateOxigenio()">Calcular LOX</button>
         <button onclick="calculateArgonio()">Calcular LAR</button>
-        <button onclick="resetFields()">LIMPAR/REFAZER</button>
+        <button onclick="resetFields()">LIMPAR</button>
         <!-- Adicione a classe result-button para os inputs de texto dos resultados -->
         <input type="text" id="pesoLiquido" placeholder="Peso Líquido" class="result-button" disabled>
         <input type="text" id="m3" placeholder="m³" class="result-button" disabled>
         <footer>
-            <p>• LuizDoVale •</p>
+            <p>luizdovale - versão 1.0.24</p>
+            
+            
         </footer>
     </div>
 
