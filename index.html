@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CALCULADORA DE GASES</title>
+    <link rel="icon" href="Favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,7 +15,7 @@
 
         .calculator {
             width: 300px;
-            margin: 50px auto;
+            margin: 10px auto;
             background-color: rgba(0, 0, 0, 0.8);
             border-radius: 30px;
             padding: 20px;
@@ -63,7 +63,7 @@
         }
 
         /* Adicione esta classe para definir a cor de fundo dos botões de resultado */
-        result-button {
+        .result-button {
             background-color: white;
         }
 
@@ -94,10 +94,11 @@
         <input type="text" id="m3" placeholder="m³" class="result-button" disabled>
         <footer>
             <p>luizdovale - versão 1.0.24</p>
-              
+            
+            
         </footer>
     </div>
-   
+
     <script>
         function handleInput(event) {
             // Substitui vírgulas por pontos
