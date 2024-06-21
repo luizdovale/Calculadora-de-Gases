@@ -1,6 +1,8 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background: 
+        linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)),
+        url('festa junina.jpeg');
   margin: 0;
   padding: 0;
   display: flex;
@@ -14,7 +16,7 @@ body {
   background-color: #ffffff;
   border-radius: 50px;
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.9);
-  padding: 30px;
+  padding: 10px;
   height: 580px;
   width: 550px;
 }
@@ -42,31 +44,31 @@ h1 {
 .result-row button {
   flex: 1;
   margin: 0 2px;
-  padding: 10px; /* padding dos inputs e botões */
+  padding: 15px; /* padding dos inputs e botões */
   border: 2px solid #bdb9b9;
   border-radius: 15px; /*raio do border-radius */
-  font-size: 15px; /* Tamanho da fonte dos inputs e botões */
+  font-size: 25px; /* Tamanho da fonte dos inputs e botões */
 }
 
 /* Estilo específico para inputs de fator, nivel inicial, nivel final e polegadas */
 .fator-input {
   height: auto;
-  width: 522px;
+  width: 512px;
 }
 
 .nivel-inicial-input {
   height: auto;
-  width: 245px;
+  width: 235px;
 }
 
 .nivel-final-input {
   height: auto;
-  width: 245px;
+  width: 235px;
 }
 
 .polegadas-input {
   height: auto;
-  width: 522px;
+  width: 512px;
   color: black !important; /* !important para garantir que a cor seja aplicada */
   font-size: 14px;
   font-weight: bold;
@@ -114,7 +116,7 @@ h1 {
   padding: 15px; /*  padding dos botões */
   border: 2px solid #bdb9b9;
   border-radius: 15px; /*  raio do border-radius */
-  font-size: 14px;
+  font-size: 25px;
   font-weight: bold; /* Tamanho da fonte dos botões */
   color: #000 !important; /* Cor do texto dos botões */
 }
@@ -146,7 +148,7 @@ h1 {
 }
 
 .calculate-argonio {
-  background-color: #1b5091; /* Cor de fundo verde */
+  background-color: #1b5091; /* Cor de fundo azul */
 }
 
 .calculate-nitrogenio:hover,
@@ -173,14 +175,13 @@ h1 {
 /* Estilo específico para o botão Limpar */
 .clear-button {
   background-color: rgb(28, 88, 255);
-  /*color: #f7f7f7 !important; /* Cor do texto do botão Limpar */
   font-weight: bold; /* Negrito no texto do botão Limpar */
   padding: 12px 13px; /* padding horizontal do botão */
   border-radius: 15px; /* Raio do border-radius do botão */
 }
 
 .clear-button:hover {
-  background-color: #713ff8; /* Cor do botão Limpar ao passar o mouse */
+  background-color: #713ff8 ; /* Cor do botão Limpar ao passar o mouse */
   font-size: 18px;
   font-weight: bold;
   color: #050505 !important; /* Cor do texto do botão Limpar ao passar o mouse */
