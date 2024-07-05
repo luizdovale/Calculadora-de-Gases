@@ -1,8 +1,9 @@
 body {
   font-family: Arial, sans-serif;
-  background: 
+  background-color: #a7a7a7;
+    /*background: 
         linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)),
-        url('festa junina.jpeg');
+        url('festa junina.jpeg');*/
   margin: 0;
   padding: 0;
   display: flex;
@@ -18,7 +19,7 @@ body {
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.9);
   padding: 10px;
   height: 580px;
-  width: 580px; /*580
+  width: 550px;
 }
 
 /* Estilo para o título h1 */
