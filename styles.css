@@ -3,7 +3,7 @@ body {
   background-color: #a7a7a7;
     background: 
         linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)),
-        url('https://br.freepik.com/vetores-gratis/fundo-gradiente-geometrico-colorido_87933777.htm#query=fundo%20horizontal&position=0&from_view=keyword&track=ais_user&uuid=35d5568a-bb20-4f41-b508-4ef9c0064fbb');*/
+        url('fundo calculadora.jpg');
   margin: 0;
   padding: 0;
   display: flex;
@@ -26,7 +26,7 @@ body {
 h1 {
   text-align: center;
   color: #1b5091;
-  font-size: 40px; /* Tamanho da fonte do título */
+  font-size: 50px; /* Tamanho da fonte do título */
   margin-bottom: 30px; /* Espaçamento abaixo do título */
 }
 
