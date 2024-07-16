@@ -1,4 +1,4 @@
-/*document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const fatorInput = document.getElementById('fator');
     const nivelInicialInput = document.getElementById('nivelInicial');
     const nivelFinalInput = document.getElementById('nivelFinal');
@@ -79,5 +79,5 @@
       m3Button.textContent = 'M³';
       document.querySelectorAll('.tooltip-container input').forEach(input => input.classList.remove('has-value'));
     }
-  });*/
+  });
   
