@@ -1,9 +1,9 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #a7a7a7;
+  background-color: #554f4f;
     background: 
         linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)),
-        url('');
+        url('FUNDO SITE AZUL.png');
   margin: 0;
   padding: 0;
   display: flex;
@@ -15,8 +15,8 @@ body {
 /* Container principal */
 .container {
   background-color: #ffffff;
-  border-radius: 50px;
-  box-shadow: 0 0 80px rgba(0, 0, 0, 0.9);
+  border-radius: 80px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
   padding: 10px;
   height: 580px;
   width: 550px;
@@ -128,15 +128,17 @@ h1 {
 
 /* Estilo específico para botões na linha de botões */
 .button-row button {
-  background-color: #1b5091;
+  background-color: #073266;
   color: #fff;
+  font-size: 25px;
+  font-weight: bold;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease; /* Efeito de transição suave */
 }
 
 .button-row button:hover {
-  background-color: #0e3a6f; /* Cor do botão ao passar o mouse */
+  background-color: #5aa1f8; /* Cor do botão ao passar o mouse */
 }
 
 /* Estilo específico para cada botão */
@@ -149,13 +151,13 @@ h1 {
 }
 
 .calculate-argonio {
-  background-color: #1b5091; /* Cor de fundo azul */
+  background-color: #09356b; /* Cor de fundo azul */
 }
 
 .calculate-nitrogenio:hover,
 .calculate-oxigenio:hover,
 .calculate-argonio:hover {
-  background-color: #0e3a6f; /* Cor ao passar o mouse */
+  background-color: #6faaf3; /* Cor ao passar o mouse */
 }
 
 .button-row button:disabled,
@@ -175,14 +177,14 @@ h1 {
 
 /* Estilo específico para o botão Limpar */
 .clear-button {
-  background-color: rgb(28, 88, 255);
+  background-color: rgb(156, 159, 172);
   font-weight: bold; /* Negrito no texto do botão Limpar */
   padding: 12px 13px; /* padding horizontal do botão */
   border-radius: 15px; /* Raio do border-radius do botão */
 }
 
 .clear-button:hover {
-  background-color: #713ff8 ; /* Cor do botão Limpar ao passar o mouse */
+  background-color: #5f5e63 ; /* Cor do botão Limpar ao passar o mouse */
   font-size: 18px;
   font-weight: bold;
   color: #050505 !important; /* Cor do texto do botão Limpar ao passar o mouse */
