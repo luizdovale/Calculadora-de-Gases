@@ -119,10 +119,6 @@ h1 {
   color: #000 !important; /* Cor do texto dos botões */
 }
 
-.result-row button:hover {
-  background-color: #cccccc; /* Cor de fundo ao passar o mouse */
-}
-
 /* Estilo específico para botões na linha de botões */
 .button-row button {
   background-color: #13293d;
