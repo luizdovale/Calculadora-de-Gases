@@ -201,7 +201,7 @@ h1 {
 
   .fator-input,
   .polegadas-input {
-    width: 170%; /* Largura total em telas pequenas */
+    width: 96%; /* Largura total em telas pequenas */
   }
 
   .nivel-inicial-input,
