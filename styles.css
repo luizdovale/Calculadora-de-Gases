@@ -183,20 +183,20 @@ h1 {
 /* Media query para responsividade */
 @media (max-width: 600px) {
   .container {
-    width: 90%; /* Largura total da tela */
+    width: 95%; /* Largura quase total da tela */
     height: auto; /* Altura automática */
     padding: 10px;
   }
 
   h1 {
-    font-size: 30px; /* Tamanho menor para o título */
+    font-size: 24px; /* Tamanho menor para o título */
   }
 
   .input-row input,
   .button-row button,
   .result-row button {
-    font-size: 18px; /* Tamanho menor da fonte */
-    padding: 10px; /* Menos padding para se ajustar */
+    font-size: 16px; /* Tamanho menor da fonte */
+    padding: 8px; /* Menos padding para se ajustar */
   }
 
   .fator-input,
@@ -206,7 +206,8 @@ h1 {
 
   .nivel-inicial-input,
   .nivel-final-input {
-    width: 48%; /* Largura quase total, com espaço entre eles */
+    width: 100%; /* Largura total em telas pequenas */
+    margin-bottom: 10px; /* Espaçamento entre inputs */
   }
 
   .input-row {
@@ -215,9 +216,11 @@ h1 {
 
   .button-row {
     flex-direction: column; /* Empilha os botões em telas pequenas */
+    margin-bottom: 10px; /* Espaçamento entre botões */
   }
 
   .result-row {
     flex-direction: column; /* Empilha os botões de resultado em telas pequenas */
   }
 }
+
