@@ -189,7 +189,7 @@ h1 {
   }
 
   h1 {
-    font-size: 24px; /* Tamanho menor para o título */
+    font-size: 28px; /* Tamanho menor para o título */
   }
 
   .input-row input,
@@ -201,7 +201,7 @@ h1 {
 
   .fator-input,
   .polegadas-input {
-    width: 100%; /* Largura total em telas pequenas */
+    width: 170%; /* Largura total em telas pequenas */
   }
 
   .nivel-inicial-input,
