@@ -199,11 +199,6 @@ h1 {
     padding: 8px;
   }
 
-  .fator-input,
-  .polegadas-input {
-    width: 100% !important;
-  }
-
   .nivel-inicial-input,
   .nivel-final-input {
     width: 48%;
