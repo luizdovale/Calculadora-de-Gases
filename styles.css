@@ -199,12 +199,12 @@ h1 {
     padding: 8px; /* Menos padding para se ajustar */
   }
 
-  .fator-input,
+.fator-input,
 .polegadas-input {
   width: 100%; /* Largura total */
-padding: 15px; /* Padding interno */
-margin: 0; /* Remove margens extras */
-box-sizing: border-box; /* Certifica que a largura de 100% leve em conta o padding e borda */
+  padding: 15px; /* Padding interno */
+  margin: 0; /* Remove margens extras */
+  box-sizing: border-box; /* Certifica que a largura de 100% leve em conta o padding e borda */
 }
 
   .nivel-inicial-input,
