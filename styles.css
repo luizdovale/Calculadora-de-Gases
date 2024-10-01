@@ -180,62 +180,57 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 242, 254, 0.8); /* Aumenta levemente o brilho no hover */
 }
 
-/* Media query para responsividade */
+/* Responsividade */
 @media (max-width: 600px) {
   .container {
-    width: 95%; /* Largura quase total da tela */
-    height: auto; /* Altura automática */
+    width: 95%;
+    height: auto;
     padding: 10px;
   }
 
   h1 {
-    font-size: 28px; /* Tamanho menor para o título */
+    font-size: 28px;
   }
 
   .input-row input,
   .button-row button,
   .result-row button {
-    font-size: 16px; /* Tamanho menor da fonte */
-    padding: 8px; /* Menos padding para se ajustar */
+    font-size: 16px;
+    padding: 8px;
   }
 
-.fator-input,
-.polegadas-input {
-  width: 100%; /* Largura total */
-  padding: 15px; /* Padding interno */
-  margin: 0; /* Remove margens extras */
-  box-sizing: border-box; /* Certifica que a largura de 100% leve em conta o padding e borda */
-}
+  .fator-input,
+  .polegadas-input {
+    width: 48%;
+  }
 
   .nivel-inicial-input,
   .nivel-final-input {
-    width: 48%; /* Largura reduzida para empilhar lado a lado */
-    margin-bottom: 10px; /* Espaçamento entre inputs */
+    width: 48%;
   }
 
   .input-row {
-    flex-direction: row; /* Mantém os inputs lado a lado */
-    justify-content: space-between; /* Espaçamento entre os inputs */
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .button-row {
-    flex-direction: row; /* Mantém os botões de cálculo na mesma linha */
-    justify-content: space-between; /* Espaçamento entre os botões */
-    margin-bottom: 10px; /* Espaçamento abaixo dos botões */
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
   }
 
   .button-row button {
-    margin: 0 5px; /* Espaçamento entre os botões */
+    margin: 0 5px;
   }
 
   .result-row {
-    flex-direction: row; /* Mantém os botões de resultado na mesma linha */
-    justify-content: space-between; /* Espaçamento entre os botões */
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .result-row button {
-    margin: 0 5px; /* Espaçamento entre os botões de resultado */
+    margin: 0 5px;
   }
 }
-
 
