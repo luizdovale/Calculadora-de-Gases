@@ -201,7 +201,7 @@ h1 {
 
   .fator-input,
   .polegadas-input {
-    width: 100%;
+    width: 100% !important;
   }
 
   .nivel-inicial-input,
