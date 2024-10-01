@@ -200,9 +200,12 @@ h1 {
   }
 
   .fator-input,
-  .polegadas-input {
-    width: 96%; /* Largura total em telas pequenas */
-  }
+.polegadas-input {
+  width: 100%; /* Largura total */
+padding: 15px; /* Padding interno */
+margin: 0; /* Remove margens extras */
+box-sizing: border-box; /* Certifica que a largura de 100% leve em conta o padding e borda */
+}
 
   .nivel-inicial-input,
   .nivel-final-input {
