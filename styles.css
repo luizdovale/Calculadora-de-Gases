@@ -189,7 +189,7 @@ h1 {
   }
 
   .container {
-    width: 90%; /* Aumenta a largura do container para 100% da tela */
+    width: 92%; /* Aumenta a largura do container para 100% da tela */
     height: auto; /* Ajusta a altura do container */
     padding: 18px; /* Aumenta o padding para uma melhor visualização em mobile */
   }
@@ -216,11 +216,11 @@ h1 {
   }
 
   #fator.fator-input {
-    width: 148%; /* Ajusta a largura do input "fator" */
+    width: 100%; /* Ajusta a largura do input "fator" */
   }
   
   #polegadas.polegadas-input {
-    width: 137%; /* Ajusta a largura do input "polegadas" */
+    width: 100%; /* Ajusta a largura do input "polegadas" */
   }  
 
   .nivel-inicial-input,
