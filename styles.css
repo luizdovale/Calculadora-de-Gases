@@ -180,58 +180,65 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 242, 254, 0.8); /* Aumenta levemente o brilho no hover */
 }
 
-/* Media query para responsividade */
+/* Responsividade */
 @media (max-width: 600px) {
+  body {
+    height: auto;
+    padding: 18px;
+    display: block; /* Ajusta o layout para uma coluna */
+  }
+
   .container {
-    width: 95%; /* Largura quase total da tela */
-    height: auto; /* Altura automática */
-    padding: 10px;
+    width: 90%; /* Aumenta a largura do container para 100% da tela */
+    height: auto; /* Ajusta a altura do container */
+    padding: 18px; /* Aumenta o padding para uma melhor visualização em mobile */
   }
 
   h1 {
-    font-size: 28px; /* Tamanho menor para o título */
+    font-size: 35px; /* Diminui o tamanho do título em telas menores */
   }
 
   .input-row input,
-  .button-row button,
   .result-row button {
-    font-size: 16px; /* Tamanho menor da fonte */
-    padding: 8px; /* Menos padding para se ajustar */
-  }
-
-  .fator-input,
-  .polegadas-input {
-    width: 90%; 
-    margin-bottom: 10px; /* Espaçamento entre inputs */
-  }
-
-  .nivel-inicial-input,
-  .nivel-final-input {
-    width: 48%; /* Largura reduzida para empilhar lado a lado */
-    margin-bottom: 10px; /* Espaçamento entre inputs */
-  }
-
-  .input-row {
-    flex-direction: row; /* Mantém os inputs lado a lado */
-    justify-content: space-between; /* Espaçamento entre os inputs */
-  }
-
-  .button-row {
-    flex-direction: row; /* Mantém os botões de cálculo na mesma linha */
-    justify-content: space-between; /* Espaçamento entre os botões */
-    margin-bottom: 10px; /* Espaçamento abaixo dos botões */
+    width: 85%; /* Faz os inputs e botões ocuparem a largura completa */
+    margin-bottom: 10px; /* Adiciona espaço entre os inputs e botões */
+    font-size: 18px; /* Ajusta o tamanho da fonte para uma melhor visualização */
+    padding: 12px; /* Diminui o padding para melhorar o toque em dispositivos menores */
+    border-radius: 20px;
   }
 
   .button-row button {
-    margin: 0 5px; /* Espaçamento entre os botões */
+    width: 50%; /* Faz os inputs e botões ocuparem a largura completa */
+    margin-bottom: 10px; /* Adiciona espaço entre os inputs e botões */
+    font-size: 18px; /* Ajusta o tamanho da fonte para uma melhor visualização */
+    padding: 12px; /* Diminui o padding para melhorar o toque em dispositivos menores */
+    border-radius: 20px;
   }
 
-  .result-row {
-    flex-direction: row; /* Mantém os botões de resultado na mesma linha */
-    justify-content: space-between; /* Espaçamento entre os botões */
+  #fator.fator-input {
+    width: 148%; /* Ajusta a largura do input "fator" */
+  }
+  
+  #polegadas.polegadas-input {
+    width: 137%; /* Ajusta a largura do input "polegadas" */
+  }  
+
+  .nivel-inicial-input,
+  .nivel-final-input {
+    width: 100%; /* Cada input ocupa 48% para que fiquem lado a lado */
   }
 
-  .result-row button {
-    margin: 0 5px; /* Espaçamento entre os botões de resultado */
+  /* Tooltip */
+  .tooltip-container {
+    display: block;
+  }
+
+  .tooltip {
+    font-size: 10px; /* Ajusta o tamanho do tooltip */
+  }
+
+  /* Estilo para o rodapé */
+  .footer {
+    font-size: 10px;
   }
 }
