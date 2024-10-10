@@ -200,7 +200,7 @@ h1 {
 
   .input-row input,
   .result-row button {
-    width: 85%; /* Faz os inputs e botões ocuparem a largura completa */
+    width: 80%; /* Faz os inputs e botões ocuparem a largura completa */
     margin-bottom: 10px; /* Adiciona espaço entre os inputs e botões */
     font-size: 18px; /* Ajusta o tamanho da fonte para uma melhor visualização */
     padding: 12px; /* Diminui o padding para melhorar o toque em dispositivos menores */
