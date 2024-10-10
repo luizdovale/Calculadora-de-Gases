@@ -216,16 +216,16 @@ h1 {
   }
 
   #fator.fator-input {
-    width: 100%; /* Ajusta a largura do input "fator" */
+    width: 120%; /* Ajusta a largura do input "fator" */
   }
   
   #polegadas.polegadas-input {
-    width: 100%; /* Ajusta a largura do input "polegadas" */
+    width: 110%; /* Ajusta a largura do input "polegadas" */
   }  
 
   .nivel-inicial-input,
   .nivel-final-input {
-    width: 100%; /* Cada input ocupa 48% para que fiquem lado a lado */
+    width: 90%; /* Cada input ocupa 48% para que fiquem lado a lado */
   }
 
   /* Tooltip */
