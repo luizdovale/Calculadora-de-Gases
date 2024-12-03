@@ -27,9 +27,12 @@ body {
 h1 {
   text-align: center;
   color: #13293d;
-  font-size: 50px; /* Tamanho da fonte do título */
-  margin-bottom: 30px; /* Espaçamento abaixo do título */
+  font-size: 50px;
+  margin-bottom: 30px;
+  transition: opacity 0.5s ease; /* Efeito de transição */
+  opacity: 1; /* Para o fade-in e fade-out */
 }
+
 
 /* Estilo para as linhas de inputs */
 .input-row,
