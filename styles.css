@@ -196,7 +196,7 @@ h1 {
 
   .container {
     width: 90%; /* Largura total em dispositivos móveis */
-    height: auto;
+    height: 75vh;
     padding: 15px;
     box-shadow: none; /* Remove sombra para evitar recortes */
   }
