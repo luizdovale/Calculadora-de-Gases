@@ -187,7 +187,7 @@ h1 {
 /* Responsividade */
 @media (max-width: 600px) {
   body {
-    height: auto;
+    height: 95vh;
     padding: 10px;
     display: flex;
     flex-direction: column;
