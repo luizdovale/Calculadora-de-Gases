@@ -83,6 +83,13 @@ h1 {
   margin-right: 4%; /* Espaçamento entre inputs */
 }
 
+/* Alterar a cor da borda dos inputs quando focados */
+.input-row input:focus,
+.button-row button:focus,
+.result-row button:focus {
+  border-color: #13293d; /* Mesma cor dos botões de cálculo */
+  outline: none; /* Remove o outline padrão do navegador */
+}
 
 /* Tooltip container */
 .tooltip-container {
@@ -115,11 +122,10 @@ h1 {
   flex-grow: 1; /* Garantir que todos ocupem o espaço disponível igualmente */
   margin: 0 4px; /* Ajuste do espaçamento entre inputs/botões */
   padding: 15px; /* padding dos botões */
-  border: 2px solid #bdb9b9;
   border-radius: 10px; /* raio do border-radius */
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold; /* Tamanho da fonte dos botões */
-  color: #000 !important; /* Cor do texto dos botões */
+  color: #312c2c !important; /* Cor do texto dos botões */
 }
 
 /* Estilo específico para botões na linha de botões */
@@ -211,8 +217,8 @@ h1 {
 
   .input-row input,
   .result-row button {
-    width: 100%; /* Inputs e botões ocupam toda a largura */
-    margin: 5px 0; /* Espaçamento uniforme */
+    width: 95%; /* Inputs e botões ocupam toda a largura */
+    margin: 5px 0.5; /* Espaçamento uniforme */
     font-size: 18px; /* Ajusta o tamanho da fonte */
     padding: 10px;
   }
