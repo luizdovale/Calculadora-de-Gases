@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const pesoLiquidoButton = document.getElementById('pesoLiquido');
   const m3Button = document.getElementById('m3');
   const titleElement = document.getElementById('main-title'); // Elemento do título
-  const texts = ['Calculadora de Gases', '🎄 Feliz Natal!!! 🎅'];
+  /*const texts = ['Calculadora de Gases', '🎄  Feliz Natal!!!  🎅'];*/
   let currentIndex = 0;
 
   // Função para alternar o texto do título
-  setInterval(() => {
+  /*setInterval(() => {
       currentIndex = (currentIndex + 1) % texts.length; // Alterna entre os textos
       titleElement.textContent = texts[currentIndex];
-  }, 3000); // Troca o texto a cada 3 segundos
+  }, 3000); // Troca o texto a cada 3 segundos*/
 
   fatorInput.addEventListener('input', handleInput);
   nivelInicialInput.addEventListener('input', handleInput);
