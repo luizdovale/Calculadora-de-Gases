@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const nivelInicial = parseFloat(nivelInicialInput.value) || 0;
       const nivelFinal = parseFloat(nivelFinalInput.value) || 0;
       const polegadas = nivelFinal - nivelInicial;
-      polegadasInput.value = `${polegadas} polegadas descarregadas`;
+      polegadasInput.value = `${polegadas} Polegadas`;
   }
 
   function formatNumber(number) {
