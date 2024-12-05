@@ -63,7 +63,7 @@ h1 {
   background: white; /* Fundo branco */
   border: none; /* Remove as bordas */
   border-radius: 10px; /* Arredondamento dos cantos */
-  font-size: 20px; /* Tamanho da fonte */
+  font-size: 16px; /* Tamanho da fonte */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para o efeito de flutuação */
   transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animação suave ao interagir */
 }
