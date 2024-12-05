@@ -46,16 +46,26 @@ h1 {
 .button-row button {
   flex-grow: 1; /* Garantir que todos ocupem o espaço disponível igualmente */
   margin: 0 5px; /* Ajuste do espaçamento entre inputs/botões */
-  padding: 15px; /* padding dos inputs e botões */
-  border: 2px solid #bdb9b9;
-  border-radius: 10px; /*raio do border-radius */
+  padding: 15px; /* Padding dos inputs e botões */
+  border: none; /* Remove a borda */
+  border-radius: 10px; /* Raio do border-radius para cantos arredondados */
   font-size: 20px; /* Tamanho da fonte dos inputs e botões */
+  background: white; /* Fundo branco */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para o efeito de flutuação */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animação suave ao interagir */
 }
 
-.result-row button{
+.result-row button {
   height: auto;
-  width: 48%; /* Ajuste de largura para inputs de mesmo tamanho */
-  margin-right: 4%; /* Espaçamento entre inputs */
+  width: 48%; /* Ajuste de largura para manter o alinhamento responsivo */
+  margin-right: 4%; /* Espaçamento entre os botões */
+  padding: 15px; /* Padding interno para manter espaçamento */
+  background: white; /* Fundo branco */
+  border: none; /* Remove as bordas */
+  border-radius: 10px; /* Arredondamento dos cantos */
+  font-size: 20px; /* Tamanho da fonte */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para o efeito de flutuação */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animação suave ao interagir */
 }
 
 /* Estilo específico para inputs de fator e polegadas */
@@ -73,13 +83,6 @@ h1 {
   margin-right: 4%; /* Espaçamento entre inputs */
 }
 
-/* Alterar a cor da borda dos inputs quando focados */
-.input-row input:focus,
-.button-row button:focus,
-.result-row button:focus {
-  border-color: #13293d; /* Mesma cor dos botões de cálculo */
-  outline: none; /* Remove o outline padrão do navegador */
-}
 
 /* Tooltip container */
 .tooltip-container {
@@ -187,7 +190,7 @@ h1 {
 /* Responsividade */
 @media (max-width: 600px) {
   body {
-    height: 95vh;
+    height: 90vh;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -198,7 +201,7 @@ h1 {
     width: 90%; /* Largura total em dispositivos móveis */
     height: 75vh;
     padding: 15px;
-    box-shadow: none; /* Remove sombra para evitar recortes */
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
   }
 
   h1 {
