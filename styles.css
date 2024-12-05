@@ -57,7 +57,7 @@ h2 {
   margin: 0 5px; /* Ajuste do espaçamento entre inputs/botões */
   padding: 15px; /* Padding dos inputs e botões */
   border: none; /* Remove a borda */
-  border-radius: 10px; /* Raio do border-radius para cantos arredondados */
+  border-radius: 8px; /* Raio do border-radius para cantos arredondados */
   font-size: 20px; /* Tamanho da fonte dos inputs e botões */
   background: white; /* Fundo branco */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para o efeito de flutuação */
@@ -71,7 +71,7 @@ h2 {
   padding: 15px; /* Padding interno para manter espaçamento */
   background: white; /* Fundo branco */
   border: none; /* Remove as bordas */
-  border-radius: 10px; /* Arredondamento dos cantos */
+  border-radius: 8px; /* Arredondamento dos cantos */
   font-size: 20px; /* Tamanho da fonte */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para o efeito de flutuação */
   transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animação suave ao interagir */
@@ -118,7 +118,7 @@ h2 {
   z-index: 1;
   top: -10px; 
   left: 5px;
-  font-size: 12px;
+  font-size: 10px;
   white-space: nowrap;
 }
 
