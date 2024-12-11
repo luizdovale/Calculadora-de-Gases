@@ -252,6 +252,11 @@ h2 {
     width: 100%; /* Todos os inputs ocupam a largura total */
   }
   
+  .polegadas-input {
+  color: black !important; /* Cor preta para o texto */
+  font-size: 20px;
+}
+  
   .footer {
     font-size: 10px; /* Reduz tamanho do texto do rodapé */
     margin-top: 10px;
