@@ -86,6 +86,7 @@ h2 {
 }
 
 .polegadas-input {
+  background: white;
   color: black !important; /* Cor preta para o texto */
   font-size: 20px;
 }
