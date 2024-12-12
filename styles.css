@@ -80,13 +80,13 @@ h2 {
 /* Estilo específico para inputs de fator e polegadas */
 .fator-input,
 .polegadas-input {
+  background: white;
   height: auto;
   width: 48%; /* Ajuste de largura para inputs de mesmo tamanho */
   margin-right: 2%; /* Espaçamento entre inputs */
 }
 
 .polegadas-input {
-  background: white;
   color: black !important; /* Cor preta para o texto */
   font-size: 20px;
 }
