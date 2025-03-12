@@ -21,6 +21,33 @@ body {
   height: 580px;
   width: 550px;
 }
+.modal {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #192742; /* Cor dos botões */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.modal button {
+  background-color: white;
+  color: #000824;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.modal button:hover {
+  background-color: #f0f0f0;
+}
 
 /* Estilo para o título h1 */
 h1 {
@@ -47,7 +74,7 @@ h2 {
 .result-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px; /* Espaçamento entre as linhas */
+  margin-bottom: 10px; /* Espaçamento entre as linhas */
 }
 
 /* Estilo para inputs nas linhas de entrada */
@@ -62,6 +89,23 @@ h2 {
   background: white; /* Fundo branco */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para o efeito de flutuação */
   transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animação suave ao interagir */
+}
+.input-pesoliquido {
+  width: 92%; /* Faz o botão ocupar toda a largura disponível */
+  margin: 5px 0; /* Espaçamento apenas acima e abaixo */
+  padding: 15px; /* Ajuste do padding */
+  border: none; /* Remove a borda */
+  border-radius: 10px; /* Bordas arredondadas */
+  font-size: 20px; /* Tamanho da fonte */
+  background: white; /* Fundo branco */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Efeito de transição */
+  margin-bottom: 10px;
+}
+#resultm3 {
+  color: black !important; /* Define a cor do texto como preto */
+  font-size: 20px !important; /* Define o tamanho do texto como 20px */
+  background-color: white !important; /* Mantém o fundo branco */
 }
 
 .result-row button {
@@ -85,7 +129,8 @@ h2 {
   margin-right: 2%; /* Espaçamento entre inputs */
 }
 
-.polegadas-input:disabled {
+.polegadas-input:disabled,
+.result-m3:disabled {
   background-color: white;
   color: black;
   cursor: not-allowed; /* Cursor de desativado */
@@ -94,7 +139,9 @@ h2 {
 
 
 .nivel-inicial-input,
-.nivel-final-input {
+.nivel-final-input,
+.peso-liquido-input,
+.result-m3-input {
   height: auto;
   width: 48%; /* Ajuste de largura para inputs de mesmo tamanho */
   margin-right: 4%; /* Espaçamento entre inputs */
@@ -178,7 +225,7 @@ h2 {
 
 .button-row button:disabled,
 .result-row button:disabled {
-  background-color: #dddddd;
+  background-color: #ffff;
   cursor: not-allowed; /* Cursor indicando que o botão está desativado */
 }
 
@@ -186,7 +233,7 @@ h2 {
 .footer {
   text-align: center;
   margin-top: 20px;
-  font-size: 12px; /* Tamanho da fonte do rodapé */
+  font-size: 15px; /* Tamanho da fonte do rodapé */
   font-style: italic;
   color: #666; /* Cor do texto do rodapé */
 }
@@ -195,7 +242,7 @@ h2 {
 #clear {
   background-color: #13293d;
   color: #ffc107 !important;
-  font-size: 25px;
+  font-size: 20px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
   border-radius: 10px;
@@ -236,7 +283,7 @@ h2 {
   .result-row button {
     width: 95%; /* Inputs e botões ocupam toda a largura */
     margin: 5px 0.5; /* Espaçamento uniforme */
-    font-size: 18px; /* Ajusta o tamanho da fonte */
+    font-size: 20px; /* Ajusta o tamanho da fonte */
     padding: 10px;
   }
 
@@ -259,7 +306,7 @@ h2 {
 }
   .polegadas-input {
   color: black !important; /* Cor preta para o texto */
-  font-size: 20px;
+  font-size: 18px;
 }
   
   .footer {
