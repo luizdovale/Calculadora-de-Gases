@@ -1,6 +1,6 @@
 # Calculadora de Gases versão Web Mobile
 
-https://luizdovale.github.io/gascalculatorweb/
+https://luizdovale.github.io/Calculadora-de-Gases/
 
 ![Licença](https://img.shields.io/badge/license-MIT-blue.svg)
 
