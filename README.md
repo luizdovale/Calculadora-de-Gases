@@ -1,3 +1,6 @@
+
+<img width="1536" height="532" alt="ImagemReadme" src="https://github.com/user-attachments/assets/58628b39-ef37-4298-8715-e79683639167" />
+
 # GasCalculator
 
 https://luizdovale.github.io/Calculadora-de-Gases/
@@ -62,9 +65,9 @@ Se deseja contribuir:
 5. Abra um Pull Request.
 
 ## Contato
-📧 Email: macedoovale@gmail.com
-🌎 Site: 
-🚛 Criado por **Luiz**
+📧 Email: luizdovaletech@gmail.com
+🌎 Site: https://luizdovaletech.vercel.app/
+🚛 Criado por **Luiz Fernando**
 
 ---
 > "Facilitando o dia a dia dos motoristas de transporte de gases!"
